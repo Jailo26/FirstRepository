@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class ScriptableObjectSingleton<T> : ScriptableObject where T : ScriptableObject
+public abstract class SingletonScriptableObject<T> : ScriptableObject where T : ScriptableObject
 {
     private static T _instance = null;
 
