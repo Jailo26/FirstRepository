@@ -10,10 +10,12 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     {
         //PhotonNetwork.JoinRoom("Game");
         PhotonNetwork.LoadLevel("Game");
+        OnJoinedRoom();
     }
 
     public override void OnJoinedRoom()
     {
-        PhotonNetwork.LoadLevel("Game");
+        //PhotonNetwork.LoadLevel("Game");
+        Debug.Log("PUN Basics Tutorial/Launcher: OnJoinedRoom() called by PUN. Now this client is in a room.");
     }
 }
