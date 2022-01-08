@@ -6,17 +6,32 @@ using Photon.Realtime;
 
 public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 {
+    public string roomName = "Room";
 
-    public void JoinRoom()
+    private void Start()
     {
-        //PhotonNetwork.JoinRoom(roomName);
-        PhotonNetwork.LoadLevel("Game");
-        Debug.Log("PUN Basics Tutorial/Launcher: OnJoinedRoom() called by PUN. Now this client is in a room.");
+        PhotonNetwork.JoinLobby();
+    }
+
+    public override void OnJoinedLobby()
+    {
+        base.OnJoinedLobby();      
+
+        Debug.Log("Successfully connected and joined lobby");
+    }
+
+    public void OnClickCreate()
+    {
+        PhotonNetwork.JoinOrCreateRoom(roomName, null, null);
+        Debug.Log("Joining room...");
     }
 
     public override void OnJoinedRoom()
     {
-        //PhotonNetwork.LoadLevel("Game");
-        //Debug.Log("PUN Basics Tutorial/Launcher: OnJoinedRoom() called by PUN. Now this client is in a room.");
+        base.OnJoinedRoom();
+
+        PhotonNetwork.LoadLevel("Game");
+
+        Debug.Log("Successfully connected and joined room");
     }
 }
