@@ -3,7 +3,7 @@ using Photon.Pun;
 
 public class RoomManager : MonoBehaviourPunCallbacks
 {
-    //public string roomName = "Room";
+    public string roomName = "Room";
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +15,12 @@ public class RoomManager : MonoBehaviourPunCallbacks
     {
         base.OnConnectedToMaster();
 
-        //PhotonNetwork.JoinLobby();
+        PhotonNetwork.JoinLobby();
 
         Debug.Log("Conected to server");
     }
 
-    /*public override void OnJoinedLobby()
+    public override void OnJoinedLobby()
     {
         base.OnJoinedLobby();
 
@@ -33,8 +33,8 @@ public class RoomManager : MonoBehaviourPunCallbacks
     {
         base.OnJoinedRoom();
 
-        GetComponent<PlayerSpawner>().SpawnPlayer();
+        //GetComponent<PlayerSpawner>().SpawnPlayer();
 
         Debug.Log("Successfully connected and joined room");
-    }*/
+    }
 }

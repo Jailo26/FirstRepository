@@ -34,4 +34,20 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
         Debug.Log("Successfully connected and joined room");
     }
+
+    public void OnClickLeaveRoom()
+    {
+        PhotonNetwork.LeaveRoom();
+
+        Debug.Log("Leaving...");
+    }
+
+    public override void OnLeftRoom()
+    {
+        base.OnLeftRoom();
+
+        PhotonNetwork.LoadLevel("Test Lobby");
+
+        Debug.Log("Successfully left the room");
+    }
 }
