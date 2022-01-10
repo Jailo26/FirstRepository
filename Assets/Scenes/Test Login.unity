@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 1565280041}
   - component: {fileID: 1565280040}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Connecting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -777,6 +777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71030446f0471fe4490dd3ec193824dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonText: {fileID: 1565280040}
 --- !u!4 &1580978785
 Transform:
   m_ObjectHideFlags: 0
