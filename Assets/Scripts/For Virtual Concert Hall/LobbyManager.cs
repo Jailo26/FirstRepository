@@ -20,6 +20,10 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public float timeBetweenUpdates = 1.5f;
     float nextUpdateTime;
 
+    List<PlayerItem> playerItemsList = new List<PlayerItem>();
+    public PlayerItem playerItemPrefab;
+    public Transform playerItemParent;
+
     private void Start()
     {
         PhotonNetwork.JoinLobby();
@@ -42,7 +46,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         roomPanel.SetActive(true);
         roomName.text = "Room Name: " + PhotonNetwork.CurrentRoom.Name;
 
-        //PhotonNetwork.LoadLevel("Game");
+        UpdatePlayerList();
 
         Debug.Log("Successfully connected and joined room");
     }
@@ -102,5 +106,36 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     {
         base.OnConnectedToMaster();
         PhotonNetwork.JoinLobby();
+    }
+
+    void UpdatePlayerList()
+    {
+        foreach(PlayerItem item in playerItemsList)
+        {
+            Destroy(item.gameObject);
+        }
+        playerItemsList.Clear();
+
+        if(PhotonNetwork.CurrentRoom == null)
+        {
+            return;
+        }
+
+        foreach(KeyValuePair<int, Player> player in PhotonNetwork.CurrentRoom.Players)
+        {
+            PlayerItem newPlayeItem = Instantiate(playerItemPrefab, playerItemParent);
+            newPlayeItem.SetPlayerInfo(player.Value);
+            playerItemsList.Add(newPlayeItem);
+        }
+    }
+
+    public override void OnPlayerEnteredRoom(Player newPlayer)
+    {
+        UpdatePlayerList();
+    }
+
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        UpdatePlayerList();
     }
 }

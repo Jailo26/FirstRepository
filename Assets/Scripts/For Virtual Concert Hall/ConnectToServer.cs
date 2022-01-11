@@ -8,14 +8,20 @@ using UnityEngine.UI;
 
 public class ConnectToServer : MonoBehaviourPunCallbacks
 {
+    public TMP_InputField ingameNameInput;
     public TextMeshProUGUI buttonText;
     // Start is called before the first frame update
     public void OnClickConnect()
     {
-        PhotonNetwork.ConnectUsingSettings();
-        PhotonNetwork.AutomaticallySyncScene = true;
-        buttonText.text = "Connecting...";
-        Debug.Log("Connecting...");
+        if(ingameNameInput.text.Length >= 1)
+        {
+            PhotonNetwork.NickName = ingameNameInput.text;
+            PhotonNetwork.ConnectUsingSettings();
+            PhotonNetwork.AutomaticallySyncScene = true;
+            buttonText.text = "Connecting...";
+            Debug.Log("Connecting...");
+        }
+        
     }
 
     public override void OnConnectedToMaster()
