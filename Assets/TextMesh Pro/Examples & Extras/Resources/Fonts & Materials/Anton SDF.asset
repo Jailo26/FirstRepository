@@ -369,20 +369,6 @@ MonoBehaviour:
       m_Height: 77
     m_Scale: 1
     m_AtlasIndex: 0
-  - m_Index: 82
-    m_Metrics:
-      m_Width: 39.40625
-      m_Height: 67.5
-      m_HorizontalBearingX: 2.6875
-      m_HorizontalBearingY: 66.703125
-      m_HorizontalAdvance: 44.734375
-    m_GlyphRect:
-      m_X: 319
-      m_Y: 101
-      m_Width: 41
-      m_Height: 68
-    m_Scale: 1
-    m_AtlasIndex: 0
   - m_Index: 93
     m_Metrics:
       m_Width: 35.546875
@@ -395,6 +381,20 @@ MonoBehaviour:
       m_Y: 96
       m_Width: 36
       m_Height: 66
+    m_Scale: 1
+    m_AtlasIndex: 0
+  - m_Index: 82
+    m_Metrics:
+      m_Width: 39.40625
+      m_Height: 67.5
+      m_HorizontalBearingX: 2.6875
+      m_HorizontalBearingY: 66.703125
+      m_HorizontalAdvance: 44.734375
+    m_GlyphRect:
+      m_X: 319
+      m_Y: 101
+      m_Width: 41
+      m_Height: 68
     m_Scale: 1
     m_AtlasIndex: 0
   m_CharacterTable:
@@ -463,12 +463,12 @@ MonoBehaviour:
     m_GlyphIndex: 74
     m_Scale: 1
   - m_ElementType: 1
-    m_Unicode: 111
-    m_GlyphIndex: 82
-    m_Scale: 1
-  - m_ElementType: 1
     m_Unicode: 122
     m_GlyphIndex: 93
+    m_Scale: 1
+  - m_ElementType: 1
+    m_Unicode: 111
+    m_GlyphIndex: 82
     m_Scale: 1
   m_AtlasTextures:
   - {fileID: 28933816116536082}
@@ -536,14 +536,14 @@ MonoBehaviour:
     m_Y: 0
     m_Width: 61
     m_Height: 96
-  - m_X: 309
-    m_Y: 91
-    m_Width: 60
-    m_Height: 87
   - m_X: 375
     m_Y: 86
     m_Width: 55
     m_Height: 85
+  - m_X: 309
+    m_Y: 91
+    m_Width: 60
+    m_Height: 87
   m_FreeGlyphRects:
   - m_X: 79
     m_Y: 30
@@ -573,26 +573,26 @@ MonoBehaviour:
     m_Y: 0
     m_Width: 528
     m_Height: 1023
-  - m_X: 309
-    m_Y: 30
-    m_Width: 7
-    m_Height: 61
-  - m_X: 232
-    m_Y: 127
-    m_Width: 77
-    m_Height: 896
-  - m_X: 430
-    m_Y: 86
-    m_Width: 4
-    m_Height: 937
-  - m_X: 369
-    m_Y: 171
-    m_Width: 654
-    m_Height: 852
   - m_X: 430
     m_Y: 96
     m_Width: 593
     m_Height: 927
+  - m_X: 430
+    m_Y: 86
+    m_Width: 4
+    m_Height: 937
+  - m_X: 309
+    m_Y: 30
+    m_Width: 7
+    m_Height: 61
+  - m_X: 369
+    m_Y: 171
+    m_Width: 654
+    m_Height: 852
+  - m_X: 232
+    m_Y: 127
+    m_Width: 77
+    m_Height: 896
   - m_X: 369
     m_Y: 91
     m_Width: 6
