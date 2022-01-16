@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Photon.Pun;
+//using Photon.Pun;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Movement : MonoBehaviour
@@ -12,24 +10,25 @@ public class Movement : MonoBehaviour
     private Vector2 input;
     private Rigidbody rb;
 
-    PhotonView view;
+    //PhotonView view;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        view = GetComponent<PhotonView>();
+        //view = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(view.IsMine)
+       /* if(view.IsMine)
         {
-            input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-            input.Normalize();
-        }
-       
+            
+        }*/
+        input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        input.Normalize();
+
     }
 
     void FixedUpdate()
