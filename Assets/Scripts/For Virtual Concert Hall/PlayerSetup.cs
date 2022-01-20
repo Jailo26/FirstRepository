@@ -10,5 +10,6 @@ public class PlayerSetup : MonoBehaviour
     {
         cameraHolder.SetActive(true);
         GetComponent<Movement>().enabled = true;
+        //GetComponent<AvatarController>().enabled = true;
     }
 }
