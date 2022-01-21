@@ -15,6 +15,6 @@ public class PlayerSpawner : MonoBehaviour
     {
         Vector3 ramdomPosition = new Vector3(Random.Range(minX,maxX),posY, Random.Range(minZ, maxZ));
         GameObject _localPlayer = PhotonNetwork.Instantiate(playerPrefab.name, ramdomPosition, Quaternion.identity);
-        _localPlayer.GetComponent<PlayerSetup>().IsLocalPlayer();
+        _localPlayer.GetComponent<PlayerSetup>().IsLocalPlayer();     
     }
 }
