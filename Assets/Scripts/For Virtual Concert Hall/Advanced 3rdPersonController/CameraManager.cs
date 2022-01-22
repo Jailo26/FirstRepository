@@ -26,7 +26,7 @@ public class CameraManager : MonoBehaviour
     public float minimumPivotAngle = -35;
     public float maximumPivotAngle = 35;
 
-    private void Awake()
+    public void OpenCamera()
     {
         targetTransform = FindObjectOfType<PlayerManager>().transform;
         inputManager = FindObjectOfType<InputManager>();
