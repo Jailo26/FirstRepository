@@ -101,7 +101,7 @@ public class FirebaseManager : MonoBehaviour
 
     public void LoginButton()
     {
-
+       
     }
     public void RegisterButton()
     {
@@ -228,7 +228,7 @@ public class FirebaseManager : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log($"Firebase User Created Successfully: {user.DisplayName}, ({user.UserId})")
+                    Debug.Log($"Firebase User Created Successfully: {user.DisplayName}, ({user.UserId})");
                 }
             }
         }
