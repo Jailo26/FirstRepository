@@ -92,4 +92,145 @@ public class FirebaseManager : MonoBehaviour
             }
         }
     }
+
+    public void ClearOutputs()
+    {
+        loginOutputText.text = "";
+        registerOutputText.text = "";
+    }
+
+    public void LoginButton()
+    {
+
+    }
+    public void RegisterButton()
+    {
+
+    }
+
+    private IEnumerator LoginLogic(string _email, string _password)
+    {
+        Credential credential = EmailAuthProvider.GetCredential(_email, _password);
+
+        var loginTask = auth.SignInAndRetrieveDataWithCredentialAsync(credential);
+
+        yield return new WaitUntil(predicate: () => loginTask.IsCompleted);
+
+        if(loginTask.Exception != null)
+        {
+            FirebaseException firebaseException = (FirebaseException)loginTask.Exception.GetBaseException();
+            AuthError error = (AuthError)firebaseException.ErrorCode;
+            string output = "Unknown Error, Please Try Again!";
+
+            switch (error)
+            {
+                case AuthError.MissingEmail:
+                    output = "Please Enter Your Email.";
+                    break;
+                case AuthError.MissingPassword:
+                    output = "Please Enter Your Password.";
+                    break;
+                case AuthError.InvalidEmail:
+                    output = "Email Is Invalid.";
+                    break;
+                case AuthError.WrongPassword:
+                    output = "Password Is Incorrect.";
+                    break;
+                case AuthError.UserNotFound:
+                    output = "Account Does Not Exist.";
+                    break;
+            }
+            loginOutputText.text = output;
+        }
+        else
+        {
+            if (user.IsEmailVerified)
+            {
+                yield return new WaitForSeconds(1f);
+                GameManager.instance.ChangeScene(1);
+            }
+            else
+            {
+                GameManager.instance.ChangeScene(1);
+            }
+        }
+    }
+
+    private IEnumerator RegisterLogic (string _username, string _email, string _password, string _confirmPassword)
+    {
+        if(_username == "")
+        {
+            registerOutputText.text = "Please Enter Your Username.";
+        }
+        else if( _password != _confirmPassword)
+        {
+            registerOutputText.text = "Passwords Do Not Match.";
+        }
+        else
+        {
+            var registerTask = auth.CreateUserWithEmailAndPasswordAsync(_email, _password);
+
+            yield return new WaitUntil(predicate: () => registerTask.IsCompleted);
+
+            if (registerTask.Exception != null)
+            {
+                FirebaseException firebaseException = (FirebaseException)registerTask.Exception.GetBaseException();
+                AuthError error = (AuthError)firebaseException.ErrorCode;
+                string output = "Unknown Error, Please Try Again!";
+
+                switch (error)
+                {
+                    case AuthError.EmailAlreadyInUse:
+                        output = "Email Already In Use";
+                        break;
+                    case AuthError.MissingPassword:
+                        output = "Please Enter Your Password.";
+                        break;
+                    case AuthError.InvalidEmail:
+                        output = "Email Is Invalid.";
+                        break;
+                    case AuthError.WeakPassword:
+                        output = "Password Is Weak.";
+                        break;
+                    case AuthError.MissingEmail:
+                        output = "Please Enter Your Email.";
+                        break;
+                }
+                registerOutputText.text = output;
+            }
+            else
+            {
+                UserProfile profile = new UserProfile
+                {
+                    DisplayName = _username,
+                };
+
+                var defaultUserTask = user.UpdateUserProfileAsync(profile);
+
+                yield return new WaitUntil(predicate: () => defaultUserTask.IsCompleted);
+
+                if (defaultUserTask.Exception != null)
+                {
+                    user.DeleteAsync();
+                    FirebaseException firebaseException = (FirebaseException)defaultUserTask.Exception.GetBaseException();
+                    AuthError error = (AuthError)firebaseException.ErrorCode;
+                    string output = "Unknown Error, Please Try Again!";
+
+                    switch (error)
+                    {
+                        case AuthError.Cancelled:
+                            output = "Update User Canceled";
+                            break;
+                        case AuthError.SessionExpired:
+                            output = "Timed Out";
+                            break;
+                    }
+                }
+                else
+                {
+                    Debug.Log($"Firebase User Created Successfully: {user.DisplayName}, ({user.UserId})")
+                }
+            }
+        }
+    }
 }

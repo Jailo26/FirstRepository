@@ -33,6 +33,7 @@ public class AuthUIManager : MonoBehaviour
     {
         loginUI.SetActive(false);
         registerUI.SetActive(false);
+        FirebaseManager.instance.ClearOutputs();
     }
 
     public void LoginScreen()
