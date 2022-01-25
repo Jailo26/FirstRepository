@@ -1417,7 +1417,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054240f1cca47bc43a1b3629a2072710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 0}
   playerPrefab: {fileID: 2945157227902381530, guid: b9bb4a16946c0f64f93538b592dfd399, type: 3}
   isSpawned: 0
   minX: 15
