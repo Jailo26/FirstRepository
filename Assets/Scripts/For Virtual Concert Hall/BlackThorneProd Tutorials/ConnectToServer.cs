@@ -4,8 +4,10 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 
+
 public class ConnectToServer : MonoBehaviourPunCallbacks
 {
+   
     //[SerializeField]
    // private FirebaseManager connector;
 
@@ -20,6 +22,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
 
     public void OnClickConnect()
     {
+        
             buttonText.text = "Connecting...";
             Debug.Log("Connecting...");
             PhotonNetwork.NickName = ingameNameInput.text;

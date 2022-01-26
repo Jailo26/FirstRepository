@@ -4,6 +4,7 @@ using UnityEngine;
 using Firebase;
 using Firebase.Auth;
 using TMPro;
+using Photon.Pun;
 
 public class FirebaseManager : MonoBehaviour
 {
@@ -102,6 +103,7 @@ public class FirebaseManager : MonoBehaviour
     public void LoginButton()
     {
         StartCoroutine(LoginLogic(loginEmail.text, loginPassword.text));
+      
     }
     public void RegisterButton()
     {
@@ -147,7 +149,8 @@ public class FirebaseManager : MonoBehaviour
             if (user.IsEmailVerified)
             {
                 yield return new WaitForSeconds(1f);
-                GameManager.instance.ChangeScene(2);
+                GameManager.instance.ChangeScene(1);
+                
             }
             else
             {
