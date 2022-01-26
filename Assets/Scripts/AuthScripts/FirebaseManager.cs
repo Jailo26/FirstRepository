@@ -147,7 +147,7 @@ public class FirebaseManager : MonoBehaviour
             if (user.IsEmailVerified)
             {
                 yield return new WaitForSeconds(1f);
-                GameManager.instance.ChangeScene(1);
+                GameManager.instance.ChangeScene(2);
             }
             else
             {
