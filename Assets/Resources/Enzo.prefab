@@ -387,6 +387,7 @@ MonoBehaviour:
   cameraInput: {x: 0, y: 0}
   cameraInputX: 0
   cameraInputY: 0
+  moveAmount: 0
   verticalInput: 0
   horizontalInput: 0
 --- !u!114 &2945157227902381347
@@ -413,7 +414,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25578137082c83f4abf70727cef5603d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3
+  isSprinting: 0
+  walkingSpeed: 1.5
+  runningSpeed: 5
   rotationSpeed: 8
 --- !u!114 &2945157227902381344
 MonoBehaviour:
