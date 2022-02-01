@@ -16,7 +16,7 @@ MonoBehaviour:
     AppIdRealtime: e68f083c-e8ce-4ad7-b60f-ef2e8eabc60c
     AppIdFusion: 
     AppIdChat: 
-    AppIdVoice: 
+    AppIdVoice: 068e0987-9b86-4bd6-9fdf-2a5aaef61d93
     AppVersion: 
     UseNameServer: 1
     FixedRegion: 
@@ -28,7 +28,7 @@ MonoBehaviour:
     AuthMode: 0
     EnableLobbyStatistics: 0
     NetworkLogging: 1
-  DevRegion: 
+  DevRegion: kr
   PunLogging: 2
   EnableSupportLogger: 0
   RunInBackground: 1
@@ -45,4 +45,4 @@ MonoBehaviour:
   - HeresWhy
   DisableAutoOpenWizard: 1
   ShowSettings: 1
-  DevRegionSetOnce: 0
+  DevRegionSetOnce: 1
