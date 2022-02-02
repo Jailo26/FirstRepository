@@ -9,6 +9,7 @@ public class CameraManager : MonoBehaviour
     public Transform targetTransform;
     public Transform cameraPivot;
     public Transform cameraTransform;
+    public GameObject fullScreneCamera;
     public LayerMask collisionLayers;
     private float defaultPosition;
     private Vector3 cameraFollowVelocity = Vector3.zero;
@@ -87,4 +88,6 @@ public class CameraManager : MonoBehaviour
         cameraVectorPosition.z = Mathf.Lerp(cameraTransform.localPosition.z, targetPosition, 0.2f);
         cameraTransform.localPosition = cameraVectorPosition;
     }
+
+    
 }
