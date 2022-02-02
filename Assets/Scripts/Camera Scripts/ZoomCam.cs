@@ -5,6 +5,11 @@ using UnityEngine;
 public class ZoomCam : MonoBehaviour
 {
     public GameObject fullScreenCamera;
+
+    public void Start()
+    {
+        //fullScreenCamera.SetActive(false);
+    }
     private void FixedUpdate()
     {
         CameraZoom();
