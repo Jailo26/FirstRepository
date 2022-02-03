@@ -4,26 +4,32 @@ using UnityEngine;
 
 public class ForVoiceChat : MonoBehaviour
 {
-    public PushToTalk pressCheck;
+    public GameObject chatBox;
+    public bool isPressed;
 
-    public bool isOn;
     // Start is called before the first frame update
     void Start()
     {
-        pressCheck = GetComponent<PushToTalk>();
+        chatBox.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(isOn == true)
-        {
-            pressCheck.enabled = true;
-        }
+        OnClick();
     }
 
     public void OnClick()
     {
-        isOn = true;
+        if(Input.GetMouseButtonDown(0) && isPressed == false && chatBox.activeInHierarchy == false)
+        {
+            chatBox.SetActive(true);
+            isPressed = true;
+        }
+        else if (Input.GetMouseButtonDown(0) && isPressed == true && chatBox.activeInHierarchy == true)
+        {
+            chatBox.SetActive(false);
+            isPressed = false;
+        }
     }
 }
