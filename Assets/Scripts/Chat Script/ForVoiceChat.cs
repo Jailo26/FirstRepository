@@ -1,35 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
+using Photon.Voice.Unity;
+using Photon.Voice.PUN;
 
 public class ForVoiceChat : MonoBehaviour
 {
-    public GameObject chatBox;
-    public bool isPressed;
+    //public bool isPressed;
+
+    public Recorder voiceRecorder;
+    private PhotonView view;
 
     // Start is called before the first frame update
     void Start()
     {
-        chatBox.SetActive(false);
+        view = GetComponent<PhotonView>();
+        voiceRecorder.TransmitEnabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        OnClick();
+        if (view.IsMine)
+        {
+            OpenMic();
+            CloseMic();
+        }
     }
 
-    public void OnClick()
+    public void OpenMic()
     {
-        if(Input.GetMouseButtonDown(0) && isPressed == false && chatBox.activeInHierarchy == false)
-        {
-            chatBox.SetActive(true);
-            isPressed = true;
-        }
-        else if (Input.GetMouseButtonDown(0) && isPressed == true && chatBox.activeInHierarchy == true)
-        {
-            chatBox.SetActive(false);
-            isPressed = false;
-        }
+        voiceRecorder.TransmitEnabled = true;
+    }
+
+    public void CloseMic()
+    {
+        voiceRecorder.TransmitEnabled = false;
     }
 }
