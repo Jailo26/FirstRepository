@@ -1,4 +1,5 @@
 using Photon.Pun;
+using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
@@ -15,10 +16,16 @@ public class ChatManager : MonoBehaviour
     private float _buildDelay = 0f;
     private int _maximumMessages = 5;
 
+    [SerializeField]
+    private LobbyManager leaveButton;
+    [SerializeField]
+    private GameObject voiceManager;
+
     // Start is called before the first frame update
     void Start()
     {
         _photon = GetComponent<PhotonView>();
+        leaveButton = GetComponent<LobbyManager>();
     }
 
     [PunRPC]
@@ -82,5 +89,21 @@ public class ChatManager : MonoBehaviour
             _messages.Clear();
             ChatContent.text = "";
         }
+    }
+
+    public void OnClickLeaveRoom()
+    {
+        //PhotonNetwork.LeaveRoom();
+        leaveButton.OnClickLeaveRoom();
+        PhotonNetwork.LoadLevel("Test Lobby");
+        Destroy(voiceManager);
+        Debug.Log("Leaving...");
+    }
+
+    public void ReconnectToRoom()
+    {
+        PhotonNetwork.ReconnectAndRejoin();
+        PhotonNetwork.LoadLevel("Game");
+        Debug.Log("Reconnecting...");
     }
 }
