@@ -7,6 +7,8 @@ public class PlayerSpawner : MonoBehaviour
 
     public GameObject playerPrefab;
 
+    GameObject _localPlayer;
+
     public bool isSpawned;
 
     public float minX;
@@ -15,10 +17,10 @@ public class PlayerSpawner : MonoBehaviour
     public float maxZ;
     public float posY;
 
-    private void Awake()
+    public void Awake()
     {
         Vector3 ramdomPosition = new Vector3(Random.Range(minX,maxX),posY, Random.Range(minZ, maxZ));
-        GameObject _localPlayer = PhotonNetwork.Instantiate(playerPrefab.name, ramdomPosition, Quaternion.identity);
+        _localPlayer = PhotonNetwork.Instantiate(playerPrefab.name, ramdomPosition, Quaternion.identity);
         isSpawned = true;
 
         if(isSpawned == true)
@@ -27,5 +29,15 @@ public class PlayerSpawner : MonoBehaviour
         }
         
         //_localPlayer.GetComponent<PlayerSetup>().IsLocalPlayer();     
+    }
+
+    public void DisableMovement()
+    {
+        _localPlayer.GetComponent<InputManager>().enabled = false;
+    }
+
+    public void EnableMovement()
+    {
+        _localPlayer.GetComponent<InputManager>().enabled = true;
     }
 }
