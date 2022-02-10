@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class ChatManager : MonoBehaviour
@@ -96,10 +97,18 @@ public class ChatManager : MonoBehaviour
         //PhotonNetwork.LeaveRoom();
         leaveButton.OnClickLeaveRoom();
         PhotonNetwork.LoadLevel("Test Lobby");
+        PhotonNetwork.LeaveRoom();
         Destroy(voiceManager);
         Debug.Log("Leaving...");
     }
 
+    public void Logout()
+    {
+        SceneManager.LoadScene(0);
+        Destroy(voiceManager);
+        PhotonNetwork.Disconnect();
+        Debug.Log("Lougout...");
+    }
     public void ReconnectToRoom()
     {
         PhotonNetwork.ReconnectAndRejoin();

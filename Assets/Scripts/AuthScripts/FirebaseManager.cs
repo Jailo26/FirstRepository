@@ -231,6 +231,11 @@ public class FirebaseManager : MonoBehaviour
                 }
                 else
                 {
+                    registerOutputText.text = "Account Successfully Created";
+                    registerUsername.text = "";
+                    registerEmail.text = "";
+                    registerPassword.text = "";
+                    registerConfirmPassword.text = "";
                     Debug.Log($"Firebase User Created Successfully: {user.DisplayName}, ({user.UserId})");
                 }
             }
