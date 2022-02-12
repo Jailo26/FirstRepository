@@ -107,7 +107,7 @@ public class ChatManager : MonoBehaviour
         SceneManager.LoadScene(0);
         Destroy(voiceManager);
         PhotonNetwork.Disconnect();
-        Debug.Log("Lougout...");
+        Debug.Log("Logout...");
     }
     public void ReconnectToRoom()
     {

@@ -1,5 +1,6 @@
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerSpawner : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PlayerSpawner : MonoBehaviour
     public GameObject playerPrefab;
 
     GameObject _localPlayer;
+
+    [SerializeField] Slider vcSlider;
 
     public bool isSpawned;
 
@@ -27,8 +30,8 @@ public class PlayerSpawner : MonoBehaviour
         {
             cameraManager.OpenCamera();
         }
-        
-        //_localPlayer.GetComponent<PlayerSetup>().IsLocalPlayer();     
+
+        _localPlayer.GetComponent<AudioSource>();
     }
 
     public void DisableMovement()
@@ -39,5 +42,10 @@ public class PlayerSpawner : MonoBehaviour
     public void EnableMovement()
     {
         _localPlayer.GetComponent<InputManager>().enabled = true;
+    }
+
+    public void VCChangeVolume()
+    {
+        _localPlayer.GetComponent<AudioSource>().volume = vcSlider.value;
     }
 }
