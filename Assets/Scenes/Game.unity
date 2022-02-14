@@ -587,6 +587,7 @@ GameObject:
   - component: {fileID: 97330412}
   - component: {fileID: 97330411}
   - component: {fileID: 97330410}
+  - component: {fileID: 97330413}
   m_Layer: 5
   m_Name: Settings NotClicked
   m_TagString: Untagged
@@ -744,6 +745,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 97330408}
   m_CullTransparentMesh: 1
+--- !u!114 &97330413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97330408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Gamepad>/start
 --- !u!1 &124561885
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,6 +770,7 @@ GameObject:
   - component: {fileID: 124561888}
   - component: {fileID: 124561887}
   - component: {fileID: 124561889}
+  - component: {fileID: 124561890}
   m_Layer: 5
   m_Name: VoiceChat NotUsed
   m_TagString: Untagged
@@ -901,6 +916,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &124561890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124561885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Gamepad>/start
 --- !u!1 &170473684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,7 +1280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &197713039
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1323,6 +1351,7 @@ GameObject:
   - component: {fileID: 292547292}
   - component: {fileID: 292547291}
   - component: {fileID: 292547290}
+  - component: {fileID: 292547293}
   m_Layer: 5
   m_Name: Settings Clicked
   m_TagString: Untagged
@@ -1480,6 +1509,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292547288}
   m_CullTransparentMesh: 1
+--- !u!114 &292547293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292547288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Gamepad>/start
 --- !u!1 &313517821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,6 +1950,7 @@ GameObject:
   - component: {fileID: 432938605}
   - component: {fileID: 432938604}
   - component: {fileID: 432938606}
+  - component: {fileID: 432938607}
   m_Layer: 5
   m_Name: TextChat NotUsed
   m_TagString: Untagged
@@ -2065,6 +2108,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &432938607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432938602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Gamepad>/start
 --- !u!1 &442569367
 GameObject:
   m_ObjectHideFlags: 0
@@ -3281,7 +3337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &753230131
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3538,6 +3594,7 @@ GameObject:
   - component: {fileID: 816832339}
   - component: {fileID: 816832338}
   - component: {fileID: 816832337}
+  - component: {fileID: 816832340}
   m_Layer: 5
   m_Name: VoiceChat BeingUsed
   m_TagString: Untagged
@@ -3683,6 +3740,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 816832335}
   m_CullTransparentMesh: 1
+--- !u!114 &816832340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816832335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Gamepad>/start
 --- !u!1 &834429161
 GameObject:
   m_ObjectHideFlags: 0
@@ -5109,6 +5179,7 @@ GameObject:
   - component: {fileID: 1520035891}
   - component: {fileID: 1520035890}
   - component: {fileID: 1520035889}
+  - component: {fileID: 1520035892}
   m_Layer: 5
   m_Name: TextChat BeingUsed
   m_TagString: Untagged
@@ -5266,6 +5337,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520035887}
   m_CullTransparentMesh: 1
+--- !u!114 &1520035892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520035887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Gamepad>/start
 --- !u!1 &1546557358
 GameObject:
   m_ObjectHideFlags: 0
@@ -5771,6 +5855,7 @@ GameObject:
   - component: {fileID: 1676348891}
   - component: {fileID: 1676348890}
   - component: {fileID: 1676348889}
+  - component: {fileID: 1676348892}
   m_Layer: 5
   m_Name: Leave Button (1)
   m_TagString: Untagged
@@ -5892,6 +5977,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1676348887}
   m_CullTransparentMesh: 1
+--- !u!114 &1676348892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676348887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Gamepad>/start
 --- !u!1 &1683216999
 GameObject:
   m_ObjectHideFlags: 0
@@ -6202,6 +6300,7 @@ GameObject:
   - component: {fileID: 1772850669}
   - component: {fileID: 1772850668}
   - component: {fileID: 1772850667}
+  - component: {fileID: 1772850670}
   m_Layer: 5
   m_Name: Leave Button
   m_TagString: Untagged
@@ -6323,6 +6422,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772850665}
   m_CullTransparentMesh: 1
+--- !u!114 &1772850670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772850665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Gamepad>/start
 --- !u!1 &1790781642
 GameObject:
   m_ObjectHideFlags: 0
