@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id">
+  <string name="firebase_database_url" translatable="false">null</string>
+  <string name="gcm_defaultSenderId" translatable="false">581255346509</string>
+  <string name="google_storage_bucket" translatable="false">concert-hall-45a1d.appspot.com</string>
+  <string name="project_id" translatable="false">concert-hall-45a1d</string>
+  <string name="google_api_key" translatable="false">AIzaSyCufQYXJlU-xhIloV8tuLAAdptsl2YO5io</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCufQYXJlU-xhIloV8tuLAAdptsl2YO5io</string>
+  <string name="google_app_id" translatable="false">1:581255346509:android:1853d3d3187398d6b01f04</string>
+  <string name="default_web_client_id" translatable="false">581255346509-f5opvtksmr8a6pe08n0t9c1d39c7n0cj.apps.googleusercontent.com</string>
+</resources>
