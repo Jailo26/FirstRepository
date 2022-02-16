@@ -27,4 +27,8 @@ public class GameManager : MonoBehaviour
         Application.Quit();
         Debug.LogWarning("Quitting");
     }
+    public void LogoutGame()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Test Login.unity
+    path: Assets/Scenes/Login.unity
     guid: c9ded068c2f66294ea4d161c794659fa
   - enabled: 1
     path: Assets/Scenes/Test Lobby.unity
@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 3e10d20ebd758fa42b5d5194080fd439
+  - enabled: 1
+    path: Assets/Scenes/Landing Scene.unity
+    guid: 9d479a8eabe91ee42a9522c4b85624f2
   m_configObjects: {}
