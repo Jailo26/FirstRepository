@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/For Virtual Concert Hall/3rdPersonController/PlayerControls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/For Virtual Concert Hall/Advanced 3rdPersonController/PlayerControls.inputactions'
 
 using System;
 using System.Collections;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3265527, g: 0.31878814, b: 0.27427617, a: 1}
+  m_IndirectSpecularColor: {r: 0.32655331, g: 0.3187881, b: 0.27427623, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1861,6 +1861,7 @@ GameObject:
   m_Component:
   - component: {fileID: 339317786}
   - component: {fileID: 339317788}
+  - component: {fileID: 339317787}
   m_Layer: 5
   m_Name: 'VC Slider '
   m_TagString: Untagged
@@ -1890,6 +1891,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -38}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &339317787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339317785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Gamepad>/select
 --- !u!114 &339317788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2718,6 +2732,7 @@ GameObject:
   - component: {fileID: 541702409}
   - component: {fileID: 541702410}
   - component: {fileID: 541702411}
+  - component: {fileID: 541702412}
   m_Layer: 5
   m_Name: Volume Slider
   m_TagString: Untagged
@@ -2824,6 +2839,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoVolume: {fileID: 68648382}
   volumeSlider: {fileID: 541702410}
+--- !u!114 &541702412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541702408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Gamepad>/select
 --- !u!1 &627008895
 GameObject:
   m_ObjectHideFlags: 0
