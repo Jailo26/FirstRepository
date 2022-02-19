@@ -16,6 +16,10 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
+       
+        Input.backButtonLeavesApp = true;
+        
     }
     public void ChangeScene(int _sceneIndex)
     {
@@ -24,7 +28,8 @@ public class GameManager : MonoBehaviour
 
     public void QuitGame()
     {
-        Application.Quit();
+        //Application.Quit();
+        System.Diagnostics.Process.GetCurrentProcess().Kill();
         Debug.LogWarning("Quitting");
     }
     public void LogoutGame()
