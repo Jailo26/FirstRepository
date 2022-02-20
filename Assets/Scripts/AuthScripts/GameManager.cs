@@ -28,12 +28,12 @@ public class GameManager : MonoBehaviour
 
     public void QuitGame()
     {
-        //Application.Quit();
-        System.Diagnostics.Process.GetCurrentProcess().Kill();
-        Debug.LogWarning("Quitting");
+        Application.Quit();
+        //System.Diagnostics.Process.GetCurrentProcess().Kill();
+        Debug.Log("Quitting");
     }
     public void LogoutGame()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Login");
     }
 }

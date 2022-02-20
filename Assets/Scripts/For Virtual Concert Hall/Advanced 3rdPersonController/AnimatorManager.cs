@@ -8,6 +8,11 @@ public class AnimatorManager : MonoBehaviour
     int horizontal;
     int vertical;
 
+    public void Start()
+    {
+        
+    }
+
     private void Awake()
     {
         animator = GetComponent<Animator>();

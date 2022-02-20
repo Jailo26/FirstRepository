@@ -34,5 +34,17 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     {
         SceneManager.LoadScene("Test Lobby");
         Debug.Log("Connected");
-    } 
+    }
+
+    public void LogoutGame()
+    {
+        SceneManager.LoadScene("Login");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+        //System.Diagnostics.Process.GetCurrentProcess().Kill();
+        Debug.Log("Quitting");
+    }
 }
